@@ -59,7 +59,7 @@ System.out.println("");
 
 System.out.println("どこに行きますか？");
 System.out.println("数字で入力してください");
-System.out.println("1：魔物の森    2：黒見の部屋");
+System.out.println("1：魔物の森    2：黒見の部屋　　3:道具屋");
 System.out.println("");
 System.out.println("");
 
@@ -107,13 +107,57 @@ for (m = 0; m < 50; m++){
      }
     
         
-    } else {
-    System.out.println("他の数字を入力しないでください");
+    } else if (behave1 ==3) {
+    System.out.println("何を買いますか？");
+    System.out.println("1:勇者の剣　　2:木刀　　3：NARUTOの単行本４２巻　　4:何も買わない");
+    System.out.println("");
+
+    int behave5 = new java.util.Scanner(System.in).nextInt();
+
+    switch(behave5){
+        case 1:
+        System.out.println("重たすぎて腕の骨が折れた！");
+        System.out.println("勇者" +hero +"に10ダメージ");
+          hp = hp - 10;
+        System.out.println("残りHP：" +hp);
+        System.out.println("");
+        System.out.println("どこへ向かいますか？");
+        System.out.println("勇者" +hero +"は魔物の森へ向かった。");
+        break;
+
+        case 2:
+        System.out.println("木刀で店主を殴ってしまった！");
+        System.out.println("GAME OVER");
+        System.out.println("");
+        System.exit(0);
+        break;
+
+        case 3:
+        System.out.println("４２巻は自来也が亡くなってしまう話だ。");
+        System.out.println("自来也が亡くなったショックで" +hero +"は寝込んでしまった！");
+        System.out.println("GAME OVER");
+        System.out.println("");
+        System.exit(0);
+        break;
+
+        case 4:
+        break;
+
+        default:
+        System.out.println("選択肢以外の数字を入力したので死んだ！");
+         System.out.println("GAME OVER");
+         System.out.println("");
+         System.exit(0);
+	     break;
+    }
+    break;
+
   }
 }
 
 
 
+System.out.println("【魔物の森】");
 System.out.println("スライムが現れた！");
 System.out.println("勇者" +hero +"はどうする？");
 System.out.println("数字で入力してください");
@@ -172,10 +216,20 @@ for (int b = 0; b < 30; b++) {
         case 4:
             System.out.println("勇者" +hero +"は逃げきった！");
             System.out.println("");
-            
-            System.out.println("どちらの城に行きますか？");
-System.out.println("1：魔王の城    2：岸和田城");
-System.out.println("");
+            break;
+        
+        default:
+            System.out.println("選択肢以外の数字を入力したので死んだ！");
+            System.out.println("GAME OVER");
+            System.out.println("");
+            System.exit(0);
+            break;
+    }
+
+
+System.out.println("どちらの城に向かいますか？");
+            System.out.println("1：魔王の城    2：岸和田城");
+            System.out.println("");
 
 int behave4 = new java.util.Scanner(System.in).nextInt();
 
@@ -225,11 +279,11 @@ for (int n = 0; n < 20; n++){
 
  }
             
-    }
+    
     
     if (hp <= 0) {
-        System.out.println("勇者" +hero +"のHPが無くなった！");
-        System.out.println("勇者" +hero +"は倒れてしまった。。。");
+        System.out.println("HPが無くなった！");
+        System.out.println("勇者は倒れてしまった。。。");
         System.out.println("GAME OVER");
         System.out.println("");
         System.exit(0);
