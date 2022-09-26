@@ -121,7 +121,6 @@ for (m = 0; m < 50; m++){
           hp = hp - 10;
         System.out.println("残りHP：" +hp);
         System.out.println("");
-        System.out.println("どこへ向かいますか？");
         System.out.println("勇者" +hero +"は魔物の森へ向かった。");
         break;
 
