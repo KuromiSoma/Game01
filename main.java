@@ -171,13 +171,14 @@ for (int b = 0; b < 30; b++) {
     
     int behave3 = new java.util.Scanner(System.in).nextInt();
     
-    switch (behave3) {
-        case 1:
+    if(behave3 == 1){
             System.out.println("勇者" +hero +"の腕の骨が折れた！");
             System.out.println("勇者" +hero +"に10ダメージ");
             hp = hp - 10;
-            if (hp >= 0){
+            if (hp > 0){
                 System.out.println("残りHP：" +hp);
+                System.out.println("");
+                System.out.println("1：殴る    2：蹴る    3：噛み付く    4：逃げる");
                 System.out.println("");
             } else {
                 System.out.println("HPがなくなってしまった！");
@@ -186,44 +187,45 @@ for (int b = 0; b < 30; b++) {
 	            break;
             }
             //hpを10下げる
-            break;
-        case 2:
+        }else if(behave3 == 2){
             System.out.println("勇者" +hero +"の脚の骨が折れた！");
             System.out.println("勇者" +hero +"に20ダメージ");
             hp = hp - 20;
-            if (hp >= 0){
+            if (hp > 0){
                 System.out.println("残りHP：" +hp);
+                System.out.println("");
+                System.out.println("1：殴る    2：蹴る    3：噛み付く    4：逃げる");
                 System.out.println("");
             } else {
                 System.out.println("HPがなくなってしまった！");
                 System.out.println("GAMEOVER");
             }
             //hpを20下げる
-            break;
-        case 3:
+        }else if (behave3 == 3){
             System.out.println("勇者" +hero +"の口からバイ菌が入った！");
             System.out.println("勇者" +hero +"に50ダメージ");
             hp = hp - 50;
-            if (hp >= 0){
+            if (hp > 0){
                 System.out.println("残りHP：" +hp);
+                System.out.println("");
+                System.out.println("1：殴る    2：蹴る    3：噛み付く    4：逃げる");
                 System.out.println("");
             } else {
                 System.out.println("HPがなくなってしまった！");
                 System.out.println("GAMEOVER");
             }
             //hpを50下げる
-            break;
-        case 4:
+        }else if(behave3 == 4){
             System.out.println("勇者" +hero +"は逃げきった！");
             System.out.println("");
             break;
-        
-        default:
+        }else{
             System.out.println("選択肢以外の数字を入力したので死んだ！");
             System.out.println("GAME OVER");
             System.out.println("");
             System.exit(0);
             break;
+        }
     }
 
 
@@ -277,7 +279,7 @@ for (int n = 0; n < 20; n++){
 
 
 
- }
+
             
     
     
