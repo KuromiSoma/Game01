@@ -5,6 +5,7 @@ public class main {
 	    System.out.println("まず、あなたの年齢を教えてください");
 	    
 	    int age = 0;
+
 	    
 	    for(int a = 0; a < 100; a++){
 	        age = new java.util.Scanner(System.in).nextInt();
@@ -140,6 +141,7 @@ for (m = 0; m < 50; m++){
         break;
 
         case 4:
+        System.out.println("道具屋を出て魔物の森に向かった！");
         break;
 
         default:
